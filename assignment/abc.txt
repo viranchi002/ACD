@@ -1,8 +1,1 @@
-/*
-hi
-hi
-hi
-*/
-int j
-printf
-scanf
+pooju is a chut and viru is a gud bwoy

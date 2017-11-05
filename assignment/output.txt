@@ -1,8 +1,4 @@
-/*
-hi
-hi
-hi
-*/
+hvjhghjgj  
 int j
 printf
 scanf

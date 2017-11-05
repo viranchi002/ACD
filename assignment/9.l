@@ -9,13 +9,13 @@ eol [\n]
 %%
 {word} {
                 if(strcmp(p,yytext)==0)
-                        fprintf(fr,q);
+                        fprintf(yyout,q);
                 else
-                        fprintf(fr,yytext);
+                        fprintf(yyout,yytext);
 
         }
-{eol} {fprintf(fr,yytext);}
-. {fprintf(fr,yytext);}
+{eol} {fprintf(yyout,yytext);}
+. {fprintf(yyout,yytext);}
 %%
 int main(int argc,char *argv[])
 {
@@ -23,7 +23,7 @@ int main(int argc,char *argv[])
         strcpy(p,argv[2]);
         strcpy(q,argv[3]);
         yyin=fopen(fname,"r+");
-        fr=fopen("rep.txt","w");   
+        yyout=fopen("rep.txt","w");   
 
         yylex();
         return(0);

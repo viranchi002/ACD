@@ -6,9 +6,10 @@ int countid=0;
 letter [a-zA-Z]
 digitt [0-9]
 id {letter}*|({letter}{digitt})+
+new \n
 %%
 
-"/*"[^\n]+"*/" {
+"/*"({letter}|{digitt}|{new})*"*/" {
 	com++;
 fprintf(yyout, " ");}
 
